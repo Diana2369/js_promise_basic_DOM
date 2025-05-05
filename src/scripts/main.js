@@ -3,9 +3,11 @@
 const promise1 = new Promise((resolve) => {
   const logo = document.querySelector('.logo');
 
-  logo.addEventListener('click', () => {
-    resolve();
-  });
+  if (logo) {
+    logo.addEventListener('click', () => {
+      resolve();
+    });
+  }
 });
 
 const promise2 = new Promise((resolve, reject) => {
